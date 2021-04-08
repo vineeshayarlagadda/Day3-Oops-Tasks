@@ -5,9 +5,6 @@ public class BankAccount {
 	private int balance;
 	private boolean status; // true for active / false for inactive
 	
-	
-	
-	
 	public BankAccount() {
 		super();
 	}
