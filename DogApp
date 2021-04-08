@@ -1,0 +1,36 @@
+package day3.task1;
+
+import java.util.*;
+public class DogApp {
+	public static void main(String[] args) {
+		Dog dog1=new Dog();
+		dog1.setName("Levi");
+		dog1.setAge(6);
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the weight of dog : ");
+		int weight=sc.nextInt();
+		dog1.setWeight(weight);
+		
+		while(true) {
+			System.out.println("---------DOG APP--------");
+			System.out.println("Enter your option");
+			System.out.println("Option 1. Feed the dog");
+			System.out.println("Option 2. Play with the dog");
+			System.out.println("Option 3. Exit");
+			int option=sc.nextInt();
+			switch(option) {
+			case 1: dog1.doFeedAnimal();
+			System.out.println("Weight of the dog after feeding it is : "+dog1.getWeight());
+			break;
+			case 2:
+				dog1.playGames();
+				System.out.println("Weight : "+dog1.getWeight());
+				break;
+			case 3:System.out.println("Finished eating and playing!");
+				System.exit(0);
+				
+			}
+		}
+	}
+}
