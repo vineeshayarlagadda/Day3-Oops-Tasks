@@ -1,0 +1,28 @@
+package day3.task1;
+
+import java.util.*;
+public class BankApp {
+public static void main(String[] args) {
+	BankAccount account1 = new BankAccount();
+	account1.setAccountHolderName("Aisha");
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the balance in the account : ");
+	int balance=sc.nextInt();
+	account1.setBalance(balance);
+	System.out.println("Enter the withdraw amount : ");
+	int withdrawAmount=sc.nextInt();
+	System.out.println("Enter the deposit amount : ");
+	int depositAmount=sc.nextInt();
+	int currentBalance=account1.getBalance();
+	if(currentBalance>=10000) {
+		account1.setStatus(true);
+		System.out.println("Remaining balance after withdrawal : Rs."+account1.doWithdrawal(withdrawAmount));
+	}
+	else {
+		account1.setStatus(false);
+		System.out.println("Balance is not sufficient for withdrawal");
+	}
+	System.out.println("Remaining balance after deposit : Rs."+account1.doDeposit(depositAmount));
+	
+	}
+}
