@@ -1,0 +1,54 @@
+package day3.task1;
+
+public class Dog {
+	private String name;
+	private int age;
+	private int weight;
+
+	public Dog() {
+		super();
+	}
+
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+
+	public String getName()
+	{
+		return name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public int getWeight() {
+		return weight;
+	}
+
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+
+// Business method
+	public void doFeedAnimal()
+	{
+		this.weight=weight+10;
+	}
+
+
+	public void playGames()
+	{
+		if(this.weight<2 || this.weight>30) {
+			System.out.println("Dog cannot play");
+		}
+		else {
+			this.weight=weight-1;
+		}
+	}
+}
